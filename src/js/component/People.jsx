@@ -1,6 +1,6 @@
 import React, {useContext, useEffect} from "react";
 import { Context } from "../store/appContext";
-import { Link, useParams } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 
 const People = () => {
@@ -9,17 +9,12 @@ const People = () => {
         height: '200px',
         objectFit: 'cover',
     };
-
-    // const params = useParams();
-    // console.log(params);
     
-
     const {store, actions} = useContext(Context);
     // console.log(store.peopleList)
 
     useEffect(()=>{
         actions.getPeopleList()
-        // actions.getPeopleId(params.theId)
     },[])
 
 	return (
@@ -35,7 +30,7 @@ const People = () => {
                             <p className="card-text"><b>Eye color:</b> {item.eye_color}</p> */}
                             <div className="d-flex justify-content-between">
                                 {/* colocar el ID */}
-                                <Link to={`/sectionStarWars/${item.uid}`}>
+                                <Link to={`/SectionStarWars/${item.uid}`}>
                                     <a href="#" className="btn btn-outline-dark fw-bold">Learn more!</a>
                                 </Link>
                                 <a href="#" className="btn btn-outline-warning"><i className="fa-solid fa-heart"></i></a>
