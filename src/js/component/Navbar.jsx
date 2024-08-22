@@ -14,9 +14,7 @@ const Navbar = () => {
             <a className="flex-sm-fill text-sm-center nav-link text-white fs-5" href="#Characters">Characters</a>
             <a className="flex-sm-fill text-sm-center nav-link text-white fs-5" href="#Planets">Planets</a>
             <a className="flex-sm-fill text-sm-center nav-link text-white fs-5" href="#Vehicles">Vehicles</a>
-            <a className="flex-sm-fill text-sm-center nav-link" href="#">
-                <Favorites />
-            </a>
+            <Favorites />
         </nav>
 	);
 };

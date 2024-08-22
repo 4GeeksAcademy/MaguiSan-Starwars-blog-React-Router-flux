@@ -30,7 +30,7 @@ const Vehicles = () => {
                                 <Link to={`/DetailsVehicles/${item.uid}`}>
                                     <a href="#" className="btn btn-outline-dark fw-bold">Learn more!</a>
                                 </Link>
-                                <a href="#" className="btn btn-outline-warning"><i className="fa-solid fa-heart"></i></a>
+                                <a href="#" className="btn btn-outline-warning" onClick={()=>actions.addFavorites(item.name)}><i className="fa-solid fa-heart"></i></a>
                             </div>
                         </div>
                     </div>

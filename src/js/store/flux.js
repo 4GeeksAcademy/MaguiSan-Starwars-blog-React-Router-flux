@@ -7,21 +7,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 			planetsList: [],
 			planetId: {},
 			vehiclesList: [],
-			vehiclesId: {},
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			vehicleId: {},
+			favorites: [],
 		},
 		actions: {
+
+			//onclick ahi
+
 			//-------------------------------PERSONAJES------------------------------- 
 			// Personajes de la base de datos  SWAPI.dev
 			// getPeopleListDev: async () => {
@@ -37,6 +29,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// 		return
 			// 	}
 			// },
+
 			// Personajes de la base de datos  SWAPI.tech
 			getPeopleList: async () => {
 				try {
@@ -123,6 +116,42 @@ const getState = ({ getStore, getActions, setStore }) => {
 					return
 				}
 			},
+
+			//-------------------------------FAVORITOS-------------------------------
+			//Agregando favoritos
+
+			addFavorites: (fav) => {
+				const store = getStore();
+				if(!store.favorites.includes(fav)){
+					setStore({favorites:[...store.favorites, fav]});
+				}
+			},
+
+			deleteFavorite: (fav)=> {
+				const store = getStore();
+				let newFavorites = store.favorites.filter((item) => item !== fav)
+				setStore({favorites: newFavorites})
+			},
+
+
+			// 	onsubmit funcion
+			// const sendData = (event) => {
+			// 	event.preventDefault();
+			// 	let valueInput = event.target.addTask.value
+			// 	// console.log(event.target.addTask.value);
+			// 	if (valueInput !== "") {
+			// 		// console.log('no estoy vacio')
+			// 		const newTask = task.concat(valueInput);
+			// 		setTask(newTask);
+			// 		event.target.addTask.value = "";
+
+			// onclick en el icono delete
+			// 		const deleteTask = (index) => {
+			// 			// console.log('me borraste?');
+			// 			let newArr = task.filter((_,i) => i !== index)
+			// 			setTask(newArr);
+			
+						
 
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
