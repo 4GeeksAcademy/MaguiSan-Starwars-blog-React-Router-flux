@@ -2,6 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			peopleList: [],
+			peopleId: [],
 			planetsList: [],
 			vehiclesList: [],
 			demo: [
@@ -20,9 +21,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 
 			//Obtener datos de los personajes de Star Wars
+			// getPeopleList: async () => {
+			// 	try {
+			// 		let response = await fetch("https://swapi.dev/api/people/")
+			// 		let data = await response.json()
+			// 		setStore({peopleList: data.results})
+			// 		// console.log(data);
+			// 		return
+
+			// 	} catch (error) {
+			// 		console.log(error)
+			// 		return
+			// 	}
+			// },
+
 			getPeopleList: async () => {
 				try {
-					let response = await fetch("https://swapi.dev/api/people/")
+					let response = await fetch("https://www.swapi.tech/api/people/")
 					let data = await response.json()
 					setStore({peopleList: data.results})
 					// console.log(data);
@@ -33,12 +48,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 					return
 				}
 			},
+			
 			//result
-			getPeopleId: async () => {
+			getPeopleId: async (id) => {
 				try {
-					let response = await fetch(`https://www.swapi.tech/api/people/1`)
+					let response = await fetch(`https://www.swapi.tech/api/people/${id}`)
 					let data = await response.json()
-					console.log(data);
+					setStore({peopleId: data.result})
+					// console.log(data);
 					return
 
 				} catch (error) {
@@ -46,9 +63,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					return
 				}
 			},
-
-
-			// `https://www.swapi.tech/api/people/${id}`
 
 			// getPeopleList: () => {
 			// 	fetch("https://www.swapi.tech/api/people/")

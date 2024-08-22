@@ -18,7 +18,7 @@ const Layout = () => {
 				<Navbar/>
 				<Routes>
 					<Route path="/" element={<AllStarWars/>} />
-					<Route path="/SectionStarWars" element={<SectionStarWars/>} />
+					<Route path="/SectionStarWars/:theid" element={<SectionStarWars/>} />
 					<Route path="*" element={<h1>Not found!</h1>} />
 				</Routes>
 			</BrowserRouter>
