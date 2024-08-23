@@ -5,7 +5,7 @@ import Favorites from "../component/Favorites.jsx";
 const Navbar = () => {
 
 	return (
-        <nav className="nav d-flex flex-column align-items-center flex-sm-row bg-black px-3" id="navbar-example2">
+        <nav className="nav d-flex flex-column align-items-center flex-sm-row bg-black px-3 sticky-sm-top" id="navbar-example2">
             <div className="w-25 ps-5">
                 <Link to="/">
                     <img className="w-50 rounded-3" src="https://brandemia.org/contenido/subidas/2021/05/portada-starwars-imagenes-brandemia-blog-1000x670.jpg" alt="" />

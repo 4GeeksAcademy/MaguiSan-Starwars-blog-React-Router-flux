@@ -14,7 +14,6 @@ const Planets = () => {
     useEffect(()=>{
         actions.getPlanetsList()
     },[])
-
 	return (
 		<div className="d-flex flex-row overflow-auto">
             {

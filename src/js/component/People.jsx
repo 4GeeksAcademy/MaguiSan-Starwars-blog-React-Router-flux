@@ -2,7 +2,6 @@ import React, {useContext, useEffect} from "react";
 import { Context } from "../store/appContext";
 import { Link} from "react-router-dom";
 
-
 const People = () => {
     const imgStyle = {
         width: '400px',
@@ -24,7 +23,7 @@ const People = () => {
                         <div className="card-body text-start">
                             <h5 className="card-title text-center fw-bold fs-4">{item.name}</h5>
                             {/* <p className="card-text"><b>Gender:</b> {item.gender}</p>
-                            <p className="card-text"><b>Hair color:</b> {item.hair_color}</p>
+                            <p className="card-text"><b>Hair color:</b> {item.skin_color}</p>
                             <p className="card-text"><b>Eye color:</b> {item.eye_color}</p> */}
                             <div className="d-flex justify-content-between">
                                 <Link to={`/DetailsCharacters/${item.uid}`}>

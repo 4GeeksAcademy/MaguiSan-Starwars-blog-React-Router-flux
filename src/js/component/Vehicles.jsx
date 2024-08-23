@@ -14,7 +14,6 @@ const Vehicles = () => {
     useEffect(()=>{
         actions.getVehiclesList()
     },[])
-
 	return (
 		<div className="d-flex flex-row overflow-auto">
             {

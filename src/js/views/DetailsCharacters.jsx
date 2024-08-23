@@ -4,15 +4,12 @@ import { useParams } from "react-router";
 
 const DetailsCharacters = () => {
     const{store, actions} = useContext(Context)
-
-    console.log("Soy un nuevo personaje", store.characterId);
-    // ?: signo ternario (como el if) si es nulo no te rompas hasta q llegue la info (a veces no lee nada) tiene q esperar hasta q legue la info
+    // console.log("Soy un nuevo personaje", store.characterId);
     
     const params = useParams();
     // console.log(params);
     
     useEffect(()=>{
-        //si le doy un valor aqui ejm.4...este ejecutara la funcion fetch concatenada con el id=4
         actions.getCharacterId(params.theid)
     },[])
 	return (
