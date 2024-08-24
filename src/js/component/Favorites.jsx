@@ -9,7 +9,7 @@ const Favorites = () => {
     },[])
 
     return(
-        <div className="btn-group pe-5">
+        <div className="btn-group">
             <button type="button" className="btn btn-warning dropdown-toggle fs-5 fw-semibold" data-bs-toggle="dropdown">
                 Favorites({store.favorites.length})
             </button>

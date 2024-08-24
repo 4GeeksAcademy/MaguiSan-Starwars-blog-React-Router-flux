@@ -20,13 +20,13 @@ const DetailsPlanets = () => {
                     </div>
                     <div className="col-md-8 ps-5 pe-4">
                         <div className="card-body p-0">
-                            <h5 className="card-title display-1">{store.planetId.properties?.name}</h5>
+                            <h5 className="card-title fw-semibold mb-5 display-1">{store.planetId.properties?.name}</h5>
                             <p className="card-text">{store.planetId.description}</p>
                             <p>Consectetur adipisicing elit. Aliquam quae, distinctio molestiae nam iusto inventore ad maxime corrupti consequatur quos cum pariatur facere, nemo doloribus. Soluta saepe eveniet eaque facere amet dolore, inventore ipsam. Est labore veritatis laborum deleniti rerum? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, qui eum! Quasi quo exercitationem natus tenetur perspiciatis temporibus quam amet excepturi nesciunt doloribus porro soluta, eius tempore aperiam? Error eaque nostrum quibusdam quisquam, atque animi ullam quo vel at doloribus sit sed quaerat doloremque quidem, repellat sint explicabo qui in.</p>
                         </div>
                     </div>
                 </div>
-                <div className="row pt-2 border-top border-2 border-danger mt-3 text-center">
+                <div className="row pt-2 border-top border-2 border-danger mt-3 text-center fs-5">
                     <div className="col">
                         <p><b>Name</b></p>
                         <p>{store.planetId.properties?.name}</p>

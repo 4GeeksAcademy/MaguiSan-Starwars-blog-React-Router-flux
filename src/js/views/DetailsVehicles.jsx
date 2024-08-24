@@ -20,13 +20,13 @@ const DetailsVehicles = () => {
                     </div>
                     <div className="col-md-8 ps-5 pe-4">
                         <div className="card-body p-0">
-                            <h5 className="card-title display-1">{store.vehicleId.properties?.name}</h5>
+                            <h5 className="card-title fw-semibold mb-5 display-1">{store.vehicleId.properties?.name}</h5>
                             <p className="card-text">{store.vehicleId.description}.</p>
                             <p>Facere obcaecati officia esse labore, doloribus iste autem cum architecto dolorem debitis. Architecto, placeat.</p>
                         </div>
                     </div>
                 </div>
-                <div className="row pt-2 border-top border-2 border-danger mt-3 text-center">
+                <div className="row pt-2 border-top border-2 border-danger mt-3 text-center fs-5">
                     <div className="col">
                         <p><b>Name</b></p>
                         <p>{store.vehicleId.properties?.name}</p>
